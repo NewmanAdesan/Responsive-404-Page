@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <title>Responsive 404 website</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                XCOMPANY
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bxs-grid-alt'></i>
+            </div>
+
+            <!-- notice some specific elements also have id attribute. this is not by chance. we will use them in the javascript-->
+
+        </nav>
+
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home">
+            <div class="home__container container">
+
+                <!-- home data -->
+                <div class="home__data">
+                    <span class="home__subtitle">Error 404</span>
+                    <h1 class="home__title">Hey Buddy</h1>
+                    <p class="home__description">
+                        We can't seem to find the page <br> you are looking for.
+                    </p>
+                    <a href="#" class="home__button">
+                        Go Home
+                    </a>
+                </div>
+
+                <!-- home image -->
+                <div class="home__img">
+                    <img src="assets/img/ghost-img.png" alt="">
+                    <div class="img__shadow"></div>
+                </div>
+            </div>
+            <footer class="home__footer">
+                <span>(554) 987-654</span>
+                <span>|</span>
+                <span>info@company.com</span>
+            </footer>
+        </section>
+
+    </main>
+
+
+    <!-- ===== PROJECT INFO CARD ===== -->
+    <section class="project_info" id="project-info">
+        <div class="project_info_card">
+            <img src="./assets/img/Front-End-Project-banner.png" class="project_info_img" />
+            <h2>Project Type</h2>
+            <p>Landing Page</p>
+            <h2>Project Name</h2>
+            <p>Responsive 404 Page</p>
+            <h2>Project Key Concepts</h2>
+            <p>responsiveness for 2k and 4k screens,<br /> ghost floating & shadow effect, <br /> component reveal
+                animation, </p>
+            <i class='bx bx-x project_info_close' style='color:#000000' id="project-info-close"></i>
+    </section>
+
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+<!-- ===============  CONCEPTS  =============== -->
+
+
+<!-- ===============  CONCEPTS  =============== -->
+<!--
+
+    RESPONSIVE CSS VARIABLES:
+        using media querries, at a specific screen width,
+        we can make the values of some css variables to change.
+        
+        in this project, we made the values of the css variables concerning fonts
+        "--normal-font-size", "--bigger-font-size", "smaller-font-size"
+        to change when the screen width exceeds 1024px
+
+
+
+    BOXICONS:
+        Boxicons is a popular icon library 
+        that provides a collection of vector icons 
+        that can be used in web development projects. 
+        These icons are designed to be lightweight, customizable, and easy to use
+
+    
+    HSL:
+        The HSL color model, or hue, saturation, and lightness, 
+        is another way to represent colors. 
+        
+        The CSS hsl function accepts 3 values: 
+        a number from 0 to 360 for hue, 
+        a percentage from 0 to 100 for saturation, and 
+        a percentage from 0 to 100 for lightness. 
+        
+        If you imagine a color wheel, 
+        the hue red is at 0 degrees, 
+        green is at 120 degrees, and 
+        blue is at 240 degrees. 
+        (check color wheel on wikipedia)
+        
+        Saturation is the intensity of a color from 0%, or gray, to 100% for pure color. 
+        Lightness is how bright a color appears, from 0%, or complete black, to 100%, complete white, with 50% being neutral.
+
+        A lightness of 50% represents the original color, while values below 50% darken the color, and values above 50% lighten the color.
+        
+        hsl(0, 100%, 50%) represents pure red
+        hsl(240, 100%, 50%) represents pure blue
+
+
+    Image Responsiveness (max-width:100%):
+        setting max-width to 100% inidicate that the image should not exceed the width of its container element.
+
+        this ensure that the images are responsive and adapt to different screen sizes.
+
+        additionally, you can make the height property set to auto so that the aspect ratio of the image is preserved
+
+
+    Responsiveness (width vs max-width property):
+        width: 1024px
+            element will have a fixed width of exactly 1024 pixels,
+            regardless of the size of its container or the viewport..
+
+            if the element's container or viewport is narrower than 1024 pixels, 
+            the element may overflow and its content might not be fully visible.
+
+        max-width: 1024px
+            element's width will be responsive not static
+            and will not exceed 1024 pixels.
+
+            if the element's container or viewport is narrower than 1024 pixels, 
+            the element will automatically scale down 
+            and adjust its width to fit within the available space.
+
+            if the container or viewport is wider than 1024 pixels, 
+            the element will not expand beyond 1024 pixels 
+            and will instead take up the available width.
+
+
+    The row-gap property:
+        a flex property that sets the spacing between each row in the flexbox works similar to space-between.
+
+
+    Web Effect Concept: Style Shift - transitioning an element styles
+        Style Shifting is a web effect concept that involves 
+        the gradual transformation of an element's appearance, 
+        resulting in an engaging and visually appealing transition. 
+        
+        This effect is commonly observed when reloading a page or interacting with elements like buttons.
+
+        The concept revolves around the transition of an element 
+        from its initial state to a final state,
+        where it undergoes various style modifications. 
+        Let's consider an example where the element in focus is a button:
+
+        1.) Initial State: The button starts in a simple state, 
+        usually as plain text enclosed within an anchor tag. 
+        It lacks any distinctive visual characteristics.
+
+        2.) Final State: To achieve the desired effect, the button is styled to its final state. 
+        This involves applying changes such as adding padding, margin, background color, and text color. 
+        These alterations transform the button into a visually appealing and interactive element.
+
+        3.) Transition Property: To enable the shifting effect, a CSS transition is applied to the button. 
+        The transition property is set, specifying the desired transition duration, such as 0.4 seconds. 
+        This duration determines the speed at which the transformation from the initial state to the final state occurs.
+
+        4.) Transition Effect: When the transition property is added, 
+        the button undergoes a smooth and gradual transition from its initial state to the final state. 
+        The specified style changes, such as padding, margin, background color, and text color, 
+        are applied gradually over the transition duration, resulting in a visually pleasing effect.
+
+
+    the zoom property:
+        for bigger screen sizes (2k & 4k) 
+        we need the contents of the to scale up
+        so that they are clear, therefore we used the zoom property, 
+        so that at these screen sizes the page will appear as if it was zoom in 
+
+    
+    Using the Scroll Reveal Javascript library
+        using the ScrollReveal library to add animation effects 
+        when elements come into view during scrolling.
+
+        the ScrollReveal object is created with specified settings like distance and duration. 
+        It sets up the overall configuration for the scroll animations.
+
+        distance: "90px": 
+        specifies the distance that an element needs to travel 
+        to fully enter the viewport before the animation is triggered.
+
+        duration: 3000: 
+        sets the duration (in milliseconds) for the animation to complete.
+
+
+
+    
+
+-->
+
+
+
+
+
+<!-- ===============  WORKFLOW  =============== -->
+<!--
+    1.) Fonts-Sizes & Colors CSS Variables
+        Drafting Out CSS varibles for the colors & fonts to be used for the project. utilizing the rem unit when setting fonts and the hsl color method when sorting colors.
+
+        Also making the variables responsive,
+        by using media querries to change their values for big screen.
+
+
+    2.) Font Family CSS Variables
+        Choose a Font Family from Google fonts.
+        choosing the space grotesk with styles 
+        "regular 400", "medium 500" and "bold 700". 
+        using "@import rule" to embed the font.
+
+
+    3.) Configuring some base syles
+        this involves
+            - setting "all elements" to have "border-box" box sizing
+            - removing all margin & paddin in "all elements"
+            - setting the font-family, font-size, font-weight, text-color of the "body element"
+            - setting all "image element" via the "max-width property to 100% to ensure responsiveness. 
+            by default the img element width is set to the actual width of the image, 
+            which could cause overflow and horizontal scrolling if the image is large. 
+            We want to avoid this issue.
+            - removing the list-style & text-decoration of the "ul & a element"
+
+
+    4.) Configuring the Header and Nav for Mobile
+        this involves
+            - placing the all the nav items in the header (nav-logo, nav-menu, nav-toggle)
+            - configuring the nav-menu styles
+            - configuring the visiblility of the nav-menu by click of the nav-toggle.
+            this is configured by changing the position of the nav-menu,
+            this is done via a class show-menu
+
+
+    5.) Configuring the main part of the page for Mobile
+        this involves 
+            - position the "404 text" and "404 ghost" via grid layout
+            - animating the "404 ghost" and its shadow via keyframes
+
+    
+    6.) Configuring for Medium Screen Sizes (>727px)
+        this involves 
+            - ensuring the navigation shows by default horizontally
+            - the navigation toggle and navigation close element are hidden
+
+    
+    7.) Configuring for large Screen Sizes (>1024px)
+        this involves
+            - the "404 text" and "404 ghost" lay horizontally
+            - the size of the "404 ghost" increases
+
+    
+    8.) Configuring for 2k & 4k Screen Sizes (>2048px & >3840)
+        this involves utilizing the zoom property to make sure
+        the content of the page are clear.
+
+    
+    9.) Animating the reveal of some of the elements using ScrollReveal.js
+        the "404 text" element, the "404 ghost" element, the footer
+
+
+    
+    ✅ Add Project Info UI  
+    ✅ Project Name
+    ✅ Project description: chatgpt(landing page project that features responsivness for small & large screens, a ghost animation, a scroll reveal animation)
+    Project Design: key concepts
+    Project Design: project workflow
+    add a the concepts.txt to document new concept learnt
+    Project Bounding Box to show code-design
+
+
+    FOR IMAGE SLIDER EFFECT
+    image in frame and also kind of dim out in the background
+    image change effect
+    image change logic
+
+
+
+
+
+
+
+
+
+-->
