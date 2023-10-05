@@ -10,12 +10,12 @@ To create the shadow effect, I utilized a div element with a blurred dark backgr
 The animation is achieved using the keyframe animation technique. <br />
 The ghost image gently oscillates back and forth in a continuous loop, giving it a floating effect. <br />
 At the same time, the ghost image shadow scales proportionally, adding depth and realism to the animation.
-<img src="" alt=" ghost floating effect code" />
-<img src="" alt=" ghost shadow effect code" />
+<img src=".\assets\img\ghost-float-effect.png" alt=" ghost floating effect code"  style="width: 100%; max-width: 700px; height: auto"/>
+<img src=".\assets\img\ghost-shadow-effect.png" alt=" ghost shadow effect code"  style="width: 100%; max-width: 700px; height: auto"/>
 
 ### Component Reveal Animation
 The component reveal animation in my project utilizes the ScrollReveal JavaScript library. This powerful library enables me to bring elements into view with smooth sliding animations. By specifying parameters such as the delay before the reveal animation, the duration of the animation, and the distance of the slide, I can precisely control how each component appears on the screen.
-<img src="" alt=" component reveal effect code" />
+<img src=".\assets\img\component-reveal-animation.png" alt=" component reveal effect code"  style="width: 100%; max-width: 700px; height: auto"/>
 
 
 ### Responsiveness for large, 2k, 4k Screens
